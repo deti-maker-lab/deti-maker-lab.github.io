@@ -14,14 +14,16 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          DETI Maker Lab
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          The central information system for projects, groups, and equipment requisitions at DETI.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Explore the Documentation 🚀
           </Link>
         </div>
       </div>
@@ -33,8 +35,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Welcome page`}
-      description="Introduction about our project.">
+      title={`Welcome to DETI Maker Lab`}
+      description="Information system for managing electronics, telecommunications, and informatics projects at DETI.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

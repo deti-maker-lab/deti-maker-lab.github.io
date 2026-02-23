@@ -5,48 +5,50 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  // Using 'string' for the image source, as we are using PNGs
+  imageSrc: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Unified Information System',
+    imageSrc: require('@site/static/img/deti-unified-system.png').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Connecting projects, groups, students, and equipment requisitions in one centralized platform, 
+        making project creation consistent and database-ready.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Smart Inventory & Requisitions',
+    imageSrc: require('@site/static/img/deti-smart-inventory.png').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Seamlessly integrated with Snipe-IT. Enjoy a simple, repeatable workflow for requesting 
+        equipment while keeping the lab's inventory perfectly synced.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Mobile Accessibility',
+    imageSrc: require('@site/static/img/deti-mobile-access.png').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Manage your electronics, telecommunications, and informatics projects on the go with 
+        our dedicated iOS and renewed Android applications.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, imageSrc, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {/* Using an <img> tag for the PNG images */}
+        <img src={imageSrc} className={styles.featureSvg} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
