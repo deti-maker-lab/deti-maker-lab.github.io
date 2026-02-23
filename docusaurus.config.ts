@@ -69,15 +69,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'DETI Makerlab',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'DETI Makerlab logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -89,7 +88,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/deti-maker-lab',
           label: 'GitHub',
           position: 'right',
         },
@@ -121,7 +120,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} deti-maker-lab. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
