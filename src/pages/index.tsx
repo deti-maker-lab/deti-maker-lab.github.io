@@ -83,8 +83,13 @@ function TimelineSection() {
 }
 
 function TeamSection() {
+  // 1. Update the team data to include specific roles from your image
   const team = [
-    'Andre Silva', 'Manuel Mendonça', 'Joao Martins', 'Jakub Suliga', 'Laura Gabryjańczyk'
+    { name: 'Jakub Suliga', role: 'Coordinator' },
+    { name: 'Laura Gabryjańczyk', role: 'Tech Lead' },
+    { name: 'João Martins', role: 'Backend' },
+    { name: 'André Silva', role: 'Frontend/UX' },
+    { name: 'Manuel Mendonça', role: 'QA/DevOps' },
   ];
   
   return (
@@ -98,10 +103,12 @@ function TeamSection() {
           {team.map((member, idx) => (
             <div className={styles.teamMember} key={idx}>
               <div className={styles.avatarPlaceholder}>
-                {member.charAt(0)}
+                {/* Access name property for the avatar letter */}
+                {member.name.charAt(0)}
               </div>
-              <Heading as="h4">{member}</Heading>
-              <p className={styles.teamRole}>Developer</p>
+              {/* Render the specific Name and Role */}
+              <Heading as="h4">{member.name}</Heading>
+              <p className={styles.teamRole}>{member.role}</p>
             </div>
           ))}
         </div>
