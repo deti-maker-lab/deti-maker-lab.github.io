@@ -1,23 +1,158 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
-  padding: 4rem 0;
+  min-height: 90vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+              url('@site/static/img/pexels-delot-18471529.jpg') center/cover no-repeat;
+              
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroBanner h1, 
+.heroBanner p {
+  color: #ffffff;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  color: #e3e3e3 !important;
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionHeader p {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 1.1rem;
+}
+
+/* ABOUT SECTION */
+.aboutSection {
+  padding: 6rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.aboutDescription {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* TIMELINE SECTION */
+.timelineSection {
+  padding: 6rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.timelineCard {
+  background: var(--ifm-background-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: transform 0.2s ease-in-out;
+}
+
+.timelineCard:hover {
+  transform: translateY(-5px);
+}
+
+.timelineId {
+  display: inline-block;
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* TEAM SECTION */
+.teamSection {
+  padding: 6rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 3rem;
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.avatarPlaceholder {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.teamRole {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.95rem;
+  margin-top: -0.5rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    min-height: 70vh;
+    padding: 3rem 1rem;
+  }
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
 }

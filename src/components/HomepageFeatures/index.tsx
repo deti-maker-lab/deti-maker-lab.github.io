@@ -3,17 +3,21 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+// Import SVGs as React components (Native Docusaurus SVGR feature)
+import UnifiedSystemSvg from '@site/static/img/unified-system.svg';
+import SmartInventorySvg from '@site/static/img/smart-inventory.svg';
+import MobileAccessSvg from '@site/static/img/mobile-access.svg';
+
 type FeatureItem = {
   title: string;
-  // Using 'string' for the image source, as we are using PNGs
-  imageSrc: string;
+  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Unified Information System',
-    imageSrc: require('@site/static/img/deti-unified-system.png').default,
+    Svg: UnifiedSystemSvg,
     description: (
       <>
         Connecting projects, groups, students, and equipment requisitions in one centralized platform, 
@@ -23,7 +27,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Smart Inventory & Requisitions',
-    imageSrc: require('@site/static/img/deti-smart-inventory.png').default,
+    Svg: SmartInventorySvg,
     description: (
       <>
         Seamlessly integrated with Snipe-IT. Enjoy a simple, repeatable workflow for requesting 
@@ -33,7 +37,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Mobile Accessibility',
-    imageSrc: require('@site/static/img/deti-mobile-access.png').default,
+    Svg: MobileAccessSvg,
     description: (
       <>
         Manage your electronics, telecommunications, and informatics projects on the go with 
@@ -43,12 +47,12 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, imageSrc, description}: FeatureItem) {
+function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        {/* Using an <img> tag for the PNG images */}
-        <img src={imageSrc} className={styles.featureSvg} alt={title} />
+        {/* Render the SVG Component directly */}
+        <Svg className={styles.featureSvg} role="img" aria-label={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
