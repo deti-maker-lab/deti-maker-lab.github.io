@@ -84,8 +84,12 @@ function TimelineSection() {
 
 function TeamSection() {
   const team = [
-    'Andre Silva', 'Manuel', 'Joao Martins', 'Jakub Suliga', 'Laura Gabryjańczyk'
-  ];
+    { name: 'Andre Silva', role: 'Frontend/UX' },
+    { name: 'Manuel Mendonça', role: 'QA/DevOps' },
+    { name: 'Joao Martins', role: 'Backend' },
+    { name: 'Jakub Suliga', role: 'Coordinator' },
+    { name: 'Laura Gabryjańczyk', role: 'Tech Lead' },
+];
   
   return (
     <section className={styles.teamSection}>
@@ -98,10 +102,10 @@ function TeamSection() {
           {team.map((member, idx) => (
             <div className={styles.teamMember} key={idx}>
               <div className={styles.avatarPlaceholder}>
-                {member.charAt(0)}
+                {member.name.charAt(0)}
               </div>
-              <Heading as="h4">{member}</Heading>
-              <p className={styles.teamRole}>Developer</p>
+              <Heading as="h4">{member.name}</Heading>
+              <p className={styles.teamRole}>{member.role}</p>
             </div>
           ))}
         </div>
