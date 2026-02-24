@@ -84,9 +84,9 @@ function TimelineSection() {
 
 function TeamSection() {
   const team = [
-    { name: 'Andre Silva', role: 'Frontend/UX' },
+    { name: 'André Silva', role: 'Frontend/UX' },
     { name: 'Manuel Mendonça', role: 'QA/DevOps' },
-    { name: 'Joao Martins', role: 'Backend' },
+    { name: 'João Martins', role: 'Backend' },
     { name: 'Jakub Suliga', role: 'Coordinator' },
     { name: 'Laura Gabryjańczyk', role: 'Tech Lead' },
 ];
