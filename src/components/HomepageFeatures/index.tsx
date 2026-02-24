@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-// Import SVGs as React components (Native Docusaurus SVGR feature)
 import UnifiedSystemSvg from '@site/static/img/unified-system.svg';
 import SmartInventorySvg from '@site/static/img/smart-inventory.svg';
 import MobileAccessSvg from '@site/static/img/mobile-access.svg';

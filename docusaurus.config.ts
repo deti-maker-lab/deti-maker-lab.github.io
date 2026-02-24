@@ -95,6 +95,12 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'Logo Universidade de Aveiro',
+        src: 'img/ua-logo-white.svg',
+        href: 'https://www.ua.pt',
+        width: 160,
+      },
       links: [
         {
           title: 'Docs',
