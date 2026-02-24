@@ -84,7 +84,7 @@ function TimelineSection() {
 
 function TeamSection() {
   const team = [
-    'Andre Silva', 'Manuel', 'Joao Martins', 'Jakub Suliga', 'Laura Gabryjańczyk'
+    'Andre Silva', 'Manuel Mendonça', 'Joao Martins', 'Jakub Suliga', 'Laura Gabryjańczyk'
   ];
   
   return (
