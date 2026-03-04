@@ -17,3 +17,13 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+makerlab:
+  label: DETI Maker Lab
+  permalink: /makerlab
+  description: DETI Maker Lab tag
+
+progress:
+  label: Work progress
+  permalink: /progress
+  description: A tag used for blog insights about the work progress
