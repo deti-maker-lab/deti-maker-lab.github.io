@@ -1,41 +1,19 @@
-# Website
+# DETI Maker Lab website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This is the source for the [deti-maker-lab.github.io](https://deti-maker-lab.github.io/) website.
 
-## Installation
+## Access
 
-```bash
-yarn
+You can access the site at the following URL:
+
+- Production (current branch): https://deti-maker-lab.github.io/
+
+## Site preview
+
+In order to make the preview available on http://127.0.0.1:3000, use the following commands:
+
 ```
+npm install
 
-## Local Development
-
-```bash
-yarn start
+npm start
 ```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

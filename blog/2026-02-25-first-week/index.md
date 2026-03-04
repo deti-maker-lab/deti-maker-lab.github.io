@@ -6,6 +6,8 @@ tags: [makerlab, progress]
 ---
 Welcome to the first update on the DETI Maker Lab project! This week was all about laying the groundwork and understanding the core of what we need to build. We kicked things off with a crucial meeting with our supervisor, prof. Diogo Gomes, and the lab technician. This was a great opportunity to get to know our main stakeholders: the students who will use the lab and the technician who manages it.
 
+<!-- truncate -->
+
 During the meeting, we took a deep dive into the current solution—a Wiki-based platform implemented back in 2018 by a previous group. While it has served the lab well, we identified several pain points that our project needs to solve:
 
 - **Complex workflows:** The current equipment requisition process is too complex and inconvenient to handle.
