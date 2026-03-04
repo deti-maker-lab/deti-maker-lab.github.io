@@ -17,3 +17,5 @@ npm install
 
 npm start
 ```
+
+![DETI Maker Lab logo](static/img/deti-maker-lab.png)
