@@ -32,6 +32,8 @@ Defining these actors gave us a clearer picture of the system’s responsibiliti
 
 We also worked on the **deployment diagram**, which helped us visualize the high-level technical structure of the solution.
 
+![Image shows deployment diagram of the system](assets/deployment_diagram.jpeg "Deployment diagram")
+
 This was an important step because our project is not just about defining features, but also about designing a realistic and viable architecture. The deployment diagram allowed us to think about how the main system components communicate with one another, how the application integrates with external services such as authentication and inventory management, and how the solution can be deployed in practice.
 
 This work gave us a better understanding of the technical dependencies of the project and helped confirm that the proposed architecture is feasible.
