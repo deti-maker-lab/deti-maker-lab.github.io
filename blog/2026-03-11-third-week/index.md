@@ -4,9 +4,10 @@ title: "Week 3: Stating requirments and architecture of the system"
 authors: [jakubs]
 tags: [makerlab, progress]
 ---
-# Weekly Progress Update
 
 Last week, our team focused on strengthening the foundation of the project by working on several key analysis and architecture tasks. Our main goal was to move from a general project idea toward a clearer and more structured system definition.
+
+<!-- truncate -->
 
 ## Functional and Non-Functional Requirements
 
