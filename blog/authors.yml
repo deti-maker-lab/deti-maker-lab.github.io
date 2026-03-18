@@ -9,3 +9,15 @@ jakubs:
     # linkedin: yangshun
     github: krecikkko
     # newsletter: https://www.greatfrontend.com
+
+  laurag:
+  name: Laura Gabryjańczyk
+  title: Erasmus+ student from Technical University of Łódź
+  url: https://github.com/lauragabryjanczyk
+  image_url: https://github.com/lauragabryjanczyk.png
+  page: true
+  socials:
+    # x: yangshunz
+    # linkedin: yangshun
+    github: lauragabryjanczyk
+    # newsletter: https://www.greatfrontend.com
