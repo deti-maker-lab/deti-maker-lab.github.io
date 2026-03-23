@@ -1,0 +1,126 @@
+erDiagram
+
+USERS {
+    int id PK
+    string name
+    string email
+    string role
+    string nmec
+    datetime created_at
+}
+
+PROJECTS {
+    int id PK
+    string name
+    string description
+    string course
+    string academic_year
+    int group_number
+    int created_by FK
+    int supervisor_id FK
+    string status
+    string tags
+    string links
+    datetime approved_at
+    datetime created_at
+}
+
+PROJECT_MEMBERS {
+    int id PK
+    int project_id FK
+    int user_id FK
+    string role
+}
+
+EQUIPMENT_MODELS {
+    int id PK
+    string name
+    string family
+    string sub_family
+    string reference_code
+    string supplier
+    decimal price
+    int snipeit_model_id
+    datetime last_synced_at
+}
+
+EQUIPMENT {
+    int id PK
+    int model_id FK
+    int snipeit_asset_id
+    string location
+    string status
+    string condition
+    datetime last_synced_at
+}
+
+EQUIPMENT_REQUEST {
+    int id PK
+    int project_id FK
+    int requested_by FK
+    string status
+    string rejection_reason
+    datetime approved_at
+    datetime created_at
+}
+
+EQUIPMENT_REQUEST_ITEMS {
+    int id PK
+    int request_id FK
+    int model_id FK
+    int quantity
+}
+
+EQUIPMENT_USAGE {
+    int id PK
+    int equipment_id FK
+    int project_id FK
+    int request_item_id FK
+    datetime checked_out_at
+    datetime due_at
+    datetime returned_at
+    string status
+}
+
+STATUS_HISTORY {
+    int id PK
+    string entity_type
+    int entity_id
+    string old_status
+    string new_status
+    int changed_by FK
+    datetime changed_at
+    string note
+}
+
+NOTIFICATIONS {
+    int id PK
+    int user_id FK
+    string title
+    string message
+    string type
+    string reference_type
+    int reference_id
+    boolean is_read
+    datetime created_at
+}
+
+USERS ||--o{ PROJECTS : creates
+USERS ||--o{ PROJECTS : supervises
+USERS ||--o{ PROJECT_MEMBERS : belongs_to
+PROJECTS ||--o{ PROJECT_MEMBERS : has
+
+EQUIPMENT_MODELS ||--o{ EQUIPMENT : has_instances
+
+PROJECTS ||--o{ EQUIPMENT_REQUEST : has
+USERS ||--o{ EQUIPMENT_REQUEST : submits
+
+EQUIPMENT_REQUEST ||--o{ EQUIPMENT_REQUEST_ITEMS : contains
+EQUIPMENT_MODELS ||--o{ EQUIPMENT_REQUEST_ITEMS : requested_as
+
+EQUIPMENT ||--o{ EQUIPMENT_USAGE : assigned_as
+PROJECTS ||--o{ EQUIPMENT_USAGE : uses
+EQUIPMENT_REQUEST_ITEMS ||--o{ EQUIPMENT_USAGE : fulfilled_by
+
+USERS ||--o{ STATUS_HISTORY : changes
+USERS ||--o{ NOTIFICATIONS : receives
