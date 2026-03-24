@@ -68,3 +68,6 @@ The current design favors:
 
 - `status_history`
 - `notifications`
+
+## Database diagram
+![Image shows database diagram of the system](../../static/img/architecture/database-diagram.png "Database diagram")
