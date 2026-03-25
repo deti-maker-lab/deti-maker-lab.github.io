@@ -15,6 +15,8 @@ A major part of the week was dedicated to preparing the **Milestone 2 presentati
 
 This presentation was an important step because it helped us organize our work into one clear and consistent vision of the system.
 
+[Click here to see our second presentation!](Milestone_2_DETIMakerLab.pdf)
+
 ## Mock-ups and Use Case Diagram
 
 We also worked on **mock-ups** and the **use case diagram**. The mock-ups helped us better visualize how users will interact with the platform and how the main workflows should look in practice.
@@ -30,5 +32,3 @@ This week was important because it allowed us to transform earlier analysis into
 ## Next Steps
 
 In the coming days, we plan to continue refining the architecture, improving the interface, and moving further toward a working proof of concept, including the integration with authentication, the database, and Snipe-IT.
-
-[Click here to see our second presentation!](Milestone_2_DETIMakerLab.pdf)

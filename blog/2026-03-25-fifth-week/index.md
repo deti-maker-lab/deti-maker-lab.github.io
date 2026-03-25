@@ -29,6 +29,8 @@ Another major task this week was writing the **technical report**. The report co
 
 Preparing this document was useful not only as a formal deliverable, but also as a way to organize the project into one coherent technical vision. It helped us connect the requirements, the architectural decisions, and the implementation work already completed.
 
+[Click here to read our technical report!](technical-report.pdf)
+
 ## VM, Database, and Snipe-IT Configuration
 
 This week was also important from the infrastructure point of view. We completed the **virtual machine configuration** and finalized the setup of the main backend environment. This included preparing the **PostgreSQL database**, creating scripts for table creation, and ensuring that **Snipe-IT** is running correctly in the target environment.
@@ -44,6 +46,3 @@ Together, these results show that the project is progressing from concept and an
 ## Next Steps
 
 In the coming days, we plan to continue connecting the frontend with the backend, expand the requisition workflow implementation, and move further with the integration between the application database and Snipe-IT.
-
-
-[Click here to read our technical report!](technical-report.pdf)
