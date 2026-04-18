@@ -19,17 +19,17 @@ At this stage, the backend is no longer just a planned architecture element, but
 
 One of the most important achievements of the week was completing the connection with **Snipe-IT**. Since Snipe-IT is intended to act as the authoritative inventory system in our architecture, finalizing this integration was a key milestone for the project.
 
-This means the application can now communicate correctly with the inventory layer, which brings us much closer to a complete requisition workflow where project-related actions can interact with real equipment data. This is also fully aligned with the project goal of integrating the Maker Lab system with Snipe-IT instead of relying on the previous equipment management approach :contentReference[oaicite:0]{index=0}.
+This means the application can now communicate correctly with the inventory layer, which brings us much closer to a complete requisition workflow where project-related actions can interact with real equipment data. This is also fully aligned with the project goal of integrating the Maker Lab system with Snipe-IT instead of relying on the previous equipment management approach.
 
 ## Docker and Deployment Configuration
 
 Another important area of work this week was deployment. We configured the project to run correctly in a **Docker-based environment**, which improves consistency between development and deployment setups. This makes the system easier to run, test, and maintain across different environments.
 
-In parallel, we also finalized the **Nginx configuration**. It is now fully working and correctly redirects traffic to the different modules of the system. This is an important infrastructure milestone because it ensures that the platform components can coexist behind one entry point, which matches the deployment-oriented architecture defined for the project :contentReference[oaicite:1]{index=1}.
+In parallel, we also finalized the **Nginx configuration**. It is now fully working and correctly redirects traffic to the different modules of the system. This is an important infrastructure milestone because it ensures that the platform components can coexist behind one entry point, which matches the deployment-oriented architecture defined for the project.
 
 ## SSO Working
 
-This week also brought progress in authentication: **SSO is now working**. Since authentication through the university identity system is one of the core functional requirements of the project, this is a very significant result :contentReference[oaicite:2]{index=2}.
+This week also brought progress in authentication: **SSO is now working**. Since authentication through the university identity system is one of the core functional requirements of the project, this is a very significant result.
 
 Having SSO working means the project is now closer to the intended real usage scenario, where users can access the system through the university authentication flow instead of relying on a separate local login mechanism.
 
