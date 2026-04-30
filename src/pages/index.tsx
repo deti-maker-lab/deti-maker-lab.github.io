@@ -83,15 +83,39 @@ function TimelineSection() {
 }
 
 function TeamSection() {
-  // 1. Update the team data to include specific roles from your image
   const team = [
-    { name: 'Jakub Suliga', role: 'Coordinator' },
-    { name: 'Laura Gabryjańczyk', role: 'Tech Lead' },
-    { name: 'João Martins', role: 'Backend' },
-    { name: 'André Silva', role: 'Frontend/UX' },
-    { name: 'Manuel Mendonça', role: 'QA/DevOps' },
+    {
+      name: 'Jakub Suliga',
+      role: 'Coordinator',
+      githubUsername: 'krecikkko',
+    },
+    {
+      name: 'Laura Gabryjańczyk',
+      role: 'Tech Lead',
+      githubUsername: 'lauragabryjanczyk',
+    },
+    {
+      name: 'João Martins',
+      role: 'Backend',
+      githubUsername: 'joaodmartins',
+    },
+    {
+      name: 'André Silva',
+      role: 'Frontend/UX',
+      githubUsername: 'andrecastrosilva',
+    },
+    {
+      name: 'Manuel Mendonça',
+      role: 'QA/DevOps',
+      githubUsername: 'manu0071212',
+    },
+    {
+      name: 'prof. Diogo Gomes',
+      role: 'Supervisor',
+      githubUsername: 'dgomes',
+    },
   ];
-  
+
   return (
     <section className={styles.teamSection}>
       <div className="container">
@@ -99,21 +123,32 @@ function TeamSection() {
           <Heading as="h2">Project Team</Heading>
           <p>The people behind the platform development.</p>
         </div>
+
         <div className={styles.teamGrid}>
-          {team.map((member, idx) => (
-            <div className={styles.teamMember} key={idx}>
-              <div className={styles.avatarPlaceholder}>
-                {/* Access name property for the avatar letter */}
-                {member.name.charAt(0)}
+          {team.map((member, idx) => {
+            const githubUrl = `https://github.com/${member.githubUsername}`;
+
+            return (
+              <div className={styles.teamMember} key={idx}>
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${member.name}'s GitHub profile`}
+                >
+                  <img
+                    className={styles.teamAvatar}
+                    src={`${githubUrl}.png?size=160`}
+                    alt={`${member.name}'s GitHub avatar`}
+                    loading="lazy"
+                  />
+                </a>
+
+                <Heading as="h4">{member.name}</Heading>
+                <p className={styles.teamRole}>{member.role}</p>
               </div>
-              {/* Render the specific Name and Role */}
-              <Heading as="h4">{member.name}</Heading>
-              <p className={styles.teamRole}>{member.role}</p>
-            </div>
-          ))}
-        </div>
-        <div className="text--center margin-top--lg">
-          <p><strong>Supervisor:</strong> prof. Diogo Gomes</p>
+            );
+          })}
         </div>
       </div>
     </section>

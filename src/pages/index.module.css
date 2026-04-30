@@ -137,6 +137,21 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+.teamAvatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--ifm-color-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.teamAvatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(56, 142, 44, 0.2);
+}
+
 .teamRole {
   color: var(--ifm-color-emphasis-600);
   font-size: 0.95rem;
