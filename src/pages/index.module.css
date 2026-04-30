@@ -8,7 +8,7 @@
   overflow: hidden;
   
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-              url('@site/static/img/pexels-delot-18471529.jpg') center/cover no-repeat;
+              url('@site/static/img/deti-makerlab-photo.png') center/cover no-repeat;
               
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
