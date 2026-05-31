@@ -53,6 +53,30 @@ function AboutSection() {
   );
 }
 
+function DemoVideoSection() {
+  return (
+    <section className={styles.videoSection}>
+      <div className="container">
+        <div className={styles.sectionHeader}>
+          <Heading as="h2">App Demonstration</Heading>
+          <p>Watch a quick walkthrough of the DETI Maker Lab system in action.</p>
+        </div>
+        <div className={styles.videoContainer}>
+          <div className={styles.videoWrapper}>
+            <iframe
+              src="https://www.youtube.com/embed/CF30eTuKIjk"
+              title="DETI Maker Lab Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function TimelineSection() {
   const milestones = [
     { id: 'M1', title: 'Inception', desc: 'Scope, stakeholders, MVP, risks, and initial architecture.' },
@@ -163,6 +187,7 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <main>
         <AboutSection />
+        <DemoVideoSection />
         <HomepageFeatures />
         <TimelineSection />
         <TeamSection />
