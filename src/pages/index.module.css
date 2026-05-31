@@ -995,16 +995,16 @@
   display: flex;
   gap: 2rem;
   position: relative;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .progressRail::before {
   content: '';
   position: absolute;
-  top: 40px;
+  top: 16px;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: var(--smart-lab-border);
   z-index: 0;
 }
@@ -1028,7 +1028,7 @@
   border-radius: 50%;
   background: var(--smart-lab-border);
   position: absolute;
-  top: -16px;
+  top: -25px;
   left: 50%;
   transform: translateX(-50%);
   border: 3px solid var(--smart-lab-bg-gradient);
@@ -1266,21 +1266,23 @@
   .progressRail {
     flex-direction: column;
     gap: 2rem;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
+    padding-top: 0;
   }
 
   .progressRail::before {
-    left: 20px;
+    left: 16px;
     top: 0;
     bottom: 0;
-    width: 3px;
+    width: 2px;
     height: 100%;
   }
 
   .milestoneNode::after {
-    left: -24px;
+    left: -25px;
     top: 50%;
     transform: translateY(-50%);
+    right: auto;
   }
 
   .browserUrlBar {

@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -11,7 +11,7 @@ import styles from './index.module.css';
 function IconGithub() {
   return (
     <svg className={styles.icon} viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
     </svg>
   );
 }
@@ -108,7 +108,7 @@ function IconSmartphone() {
 }
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={styles.heroBanner}>
       {/* Background radial effects */}
@@ -137,10 +137,10 @@ function HomepageHeader() {
               <Link className="button button--secondary button--lg" to="/docs/intro">
                 <IconBook /> Read Documentation
               </Link>
-              <a 
-                className={clsx('button button--secondary button--lg', styles.githubBtn)} 
-                href="https://github.com/deti-maker-lab" 
-                target="_blank" 
+              <a
+                className={clsx('button button--secondary button--lg', styles.githubBtn)}
+                href="https://github.com/deti-maker-lab"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <IconGithub /> GitHub
@@ -161,7 +161,7 @@ function HomepageHeader() {
                 <div className={styles.mockupTitle}>makerlab-control-center v1.0.4</div>
                 <div className={styles.mockupSpacer} />
               </div>
-              
+
               {/* Mockup Dashboard Content */}
               <div className={styles.mockupBody}>
                 {/* Stats row */}
@@ -244,43 +244,43 @@ function ProblemSolutionSection() {
     <section className={styles.problemSolutionSection}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <Heading as="h2">From Scattered Workflows to Structured Lab Operations</Heading>
+          <Heading as="h2">From scattered workflows to structured lab operations</Heading>
           <p>We replaced manual files and untraceable approvals with a robust digital custody system.</p>
         </div>
-        
+
         <div className={styles.problemSolutionGrid}>
           {/* BEFORE CARD */}
           <div className={clsx(styles.psCard, styles.beforeCard)}>
             <div className={styles.psCardHeader}>
-              <span className={styles.psBadgeBefore}>Outdated Process</span>
-              <Heading as="h3">The Old Scattered Way</Heading>
+              <span className={styles.psBadgeBefore}>Outdated process</span>
+              <Heading as="h3">The old scattered way</Heading>
             </div>
             <ul className={styles.psList}>
               <li>
                 <IconX />
                 <div>
-                  <strong>Wiki-Based Process:</strong>
+                  <strong>Wiki-based process:</strong>
                   <p>Decentralized project documentation with layout inconsistency.</p>
                 </div>
               </li>
               <li>
                 <IconX />
                 <div>
-                  <strong>Markdown Project Creation:</strong>
+                  <strong>Markdown project creation:</strong>
                   <p>Manually editing markdown files which are prone to format errors.</p>
                 </div>
               </li>
               <li>
                 <IconX />
                 <div>
-                  <strong>Hard-to-Track Equipment:</strong>
+                  <strong>Hard-to-track equipment:</strong>
                   <p>Spreadsheet logs that quickly fall out of sync with actual hardware.</p>
                 </div>
               </li>
               <li>
                 <IconX />
                 <div>
-                  <strong>Cumbersome Requisitions:</strong>
+                  <strong>Cumbersome requisitions:</strong>
                   <p>Inconvenient request trails with unclear approval authority.</p>
                 </div>
               </li>
@@ -297,28 +297,28 @@ function ProblemSolutionSection() {
               <li>
                 <IconCheck />
                 <div>
-                  <strong>Structured Project Forms:</strong>
+                  <strong>Structured project forms:</strong>
                   <p>Direct inputs validate user data and initialize proper database structures.</p>
                 </div>
               </li>
               <li>
                 <IconCheck />
                 <div>
-                  <strong>Project-based Requisitions:</strong>
+                  <strong>Project-based requisitions:</strong>
                   <p>Tie equipment directly to project timelines, groups, and academic courses.</p>
                 </div>
               </li>
               <li>
                 <IconCheck />
                 <div>
-                  <strong>Snipe-IT Inventory Authority:</strong>
+                  <strong>Snipe-IT inventory authority:</strong>
                   <p>Real-time sync to the Snipe-IT API keeps availability accurate.</p>
                 </div>
               </li>
               <li>
                 <IconCheck />
                 <div>
-                  <strong>Status History & Traceability:</strong>
+                  <strong>Status history & Traceability:</strong>
                   <p>Full database history records every single check-out, handoff, and return.</p>
                 </div>
               </li>
@@ -334,22 +334,22 @@ function WorkflowSection() {
   const steps = [
     {
       num: '01',
-      title: 'Project Created',
+      title: 'Project created',
       desc: 'Form teams, add supervisors, and state objectives.',
     },
     {
       num: '02',
-      title: 'Equipment Requested',
+      title: 'Equipment requested',
       desc: 'Select necessary components synced directly with Snipe-IT.',
     },
     {
       num: '03',
-      title: 'Technician Approves',
+      title: 'Technician approves',
       desc: 'Administrators validate availability and approve request logs.',
     },
     {
       num: '04',
-      title: 'Item Assigned',
+      title: 'Item assigned',
       desc: 'Assets checked out to student and linked to the active project.',
     },
     {
@@ -359,7 +359,7 @@ function WorkflowSection() {
     },
     {
       num: '06',
-      title: 'History Saved',
+      title: 'History saved',
       desc: 'Complete lifecycle state archived in the PostgreSQL database.',
     },
   ];
@@ -369,7 +369,7 @@ function WorkflowSection() {
       <div className={styles.workflowGlow} />
       <div className="container">
         <div className={styles.sectionHeader}>
-          <Heading as="h2">A Complete Requisition Lifecycle</Heading>
+          <Heading as="h2">A complete requisition lifecycle</Heading>
           <p>A transparent and automated path designed to save administrative time and trace assets.</p>
         </div>
 
@@ -397,7 +397,7 @@ function PlatformModulesSection() {
     },
     {
       icon: <IconShoppingBag />,
-      title: 'Equipment Requisitions',
+      title: 'Equipment requisitions',
       desc: 'Search, filter, and request sensors, boards, and tools with a simple cart checkout interface.',
     },
     {
@@ -426,7 +426,7 @@ function PlatformModulesSection() {
     <section className={styles.modulesSection}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <Heading as="h2">Everything the Lab Workflow Needs</Heading>
+          <Heading as="h2">Everything the lab workflow needs</Heading>
           <p>Our platform handles all components of project tracking and physical resource distribution.</p>
         </div>
 
@@ -449,10 +449,10 @@ function DemoVideoSection() {
     <section className={styles.videoSection} id="demo-video">
       <div className="container">
         <div className={styles.sectionHeader}>
-          <Heading as="h2">App Demonstration</Heading>
+          <Heading as="h2">App demonstration</Heading>
           <p>Watch a quick walkthrough of the DETI Maker Lab system in action.</p>
         </div>
-        
+
         {/* Browser Showcase Wrapper */}
         <div className={styles.browserShowcase}>
           {/* Top Window Chrome */}
@@ -468,7 +468,7 @@ function DemoVideoSection() {
               <span className={styles.badgeShowcase}>Snipe-IT Synced</span>
             </div>
           </div>
-          
+
           {/* Video Container */}
           <div className={styles.videoContainer}>
             <div className={styles.videoWrapper}>
@@ -500,7 +500,7 @@ function ArchitectureSection() {
     <section className={styles.architectureSection}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <Heading as="h2">Built Around Clean Integrations</Heading>
+          <Heading as="h2">Built around clean integrations</Heading>
           <p>The platform aggregates identity, database layers, and active physical asset databases.</p>
         </div>
 
@@ -508,7 +508,7 @@ function ArchitectureSection() {
           {/* Node 1: Client Applications */}
           <div className={styles.archNodeCard}>
             <div className={styles.archNodeBadge}>Frontends</div>
-            <Heading as="h4">Client Applications</Heading>
+            <Heading as="h4">Client applications</Heading>
             <p>React SPA + Native iOS/Android Companion Apps</p>
           </div>
 
@@ -546,7 +546,7 @@ function ArchitectureSection() {
             <div className={styles.archSystemItem}>
               <span className={styles.systemDotCyan} />
               <div>
-                <strong>Snipe-IT Asset Sync</strong>
+                <strong>Snipe-IT asset sync</strong>
                 <p>Barcoded inventory inventory</p>
               </div>
             </div>
@@ -566,30 +566,30 @@ function ArchitectureSection() {
 
 function TimelineSection() {
   const milestones = [
-    { 
-      id: 'M1', 
-      title: 'Inception', 
+    {
+      id: 'M1',
+      title: 'Inception',
       desc: 'Scope, stakeholders, MVP definition, risks, and initial system architecture drafts.',
       status: 'Completed',
       isActive: false
     },
-    { 
-      id: 'M2', 
-      title: 'Elaboration', 
+    {
+      id: 'M2',
+      title: 'Elaboration',
       desc: 'Feasibility check, functional proof of concept, and SSO authentication tests.',
       status: 'Completed',
       isActive: false
     },
-    { 
-      id: 'M3', 
-      title: 'Construction', 
+    {
+      id: 'M3',
+      title: 'Construction',
       desc: 'Functional control panels, full Snipe-IT inventory link, integration tests, and CI/CD pipelines.',
       status: 'Completed',
       isActive: false
     },
-    { 
-      id: 'M4', 
-      title: 'Transition', 
+    {
+      id: 'M4',
+      title: 'Transition',
       desc: 'Stabilization, developer documentation, production release preparation, and demonstration.',
       status: 'Active Release',
       isActive: true
@@ -600,19 +600,19 @@ function TimelineSection() {
     <section className={styles.timelineSection}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <Heading as="h2">Project Evolution</Heading>
+          <Heading as="h2">Project evolution</Heading>
           <p>Our milestone checklist to deliver a highly reliable software system.</p>
         </div>
-        
+
         <div className={styles.progressRail}>
           {milestones.map((m, idx) => (
-            <div 
-              className={clsx(styles.milestoneNode, {[styles.activeMilestoneNode]: m.isActive})} 
+            <div
+              className={clsx(styles.milestoneNode, { [styles.activeMilestoneNode]: m.isActive })}
               key={idx}
             >
               <div className={styles.milestoneHeader}>
                 <span className={styles.milestoneId}>{m.id}</span>
-                <span className={clsx(styles.statusBadge, {[styles.statusBadgeActive]: m.isActive})}>
+                <span className={clsx(styles.statusBadge, { [styles.statusBadgeActive]: m.isActive })}>
                   {m.status}
                 </span>
               </div>
@@ -664,7 +664,7 @@ function TeamSection() {
     <section className={styles.teamSection}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <Heading as="h2">Project Team</Heading>
+          <Heading as="h2">Project team</Heading>
           <p>The engineering team behind the DETI Maker Lab system.</p>
         </div>
 
@@ -694,8 +694,8 @@ function TeamSection() {
 
                 <Heading as="h4">{member.name}</Heading>
                 <span className={styles.teamRoleBadge}>{member.role}</span>
-                <a 
-                  className={styles.teamGithubLink} 
+                <a
+                  className={styles.teamGithubLink}
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
