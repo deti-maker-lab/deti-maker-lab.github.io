@@ -522,7 +522,7 @@ function ArchitectureSection() {
           <div className={clsx(styles.archNodeCard, styles.archNodePrimary)}>
             <div className={clsx(styles.archNodeBadge, styles.primaryNodeBadge)}>Core API Gateway</div>
             <Heading as="h4">MakerLab API</Heading>
-            <p>Node.js controller handling routes, policies, and SSO tokens</p>
+            <p>FastAPI backend handling API routes, requisition logic, and SSO/session integration.</p>
           </div>
 
           {/* Connector 2 */}
