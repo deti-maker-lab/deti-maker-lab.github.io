@@ -158,76 +158,141 @@ function HomepageHeader() {
                   <span className={styles.dotYellow} />
                   <span className={styles.dotGreen} />
                 </div>
-                <div className={styles.mockupTitle}>makerlab-control-center v1.0.4</div>
+                <div className={styles.mockupTitle}>makerlab-dashboard</div>
                 <div className={styles.mockupSpacer} />
               </div>
 
-              {/* Mockup Dashboard Content */}
-              <div className={styles.mockupBody}>
-                {/* Stats row */}
-                <div className={styles.mockupStatsGrid}>
-                  <div className={styles.statMiniCard}>
-                    <span className={styles.statLabel}>Active Projects</span>
-                    <span className={styles.statVal}>12</span>
-                    <span className={styles.statusIndicatorGreen} />
+              {/* Realistic App Layout */}
+              <div className={styles.mockupContainer}>
+                {/* Left Sidebar */}
+                <div className={styles.mockupSidebar}>
+                  <div className={styles.mockupSidebarLogo}>
+                    <span className={styles.logoDeti}>DETI</span>
+                    <span className={styles.logoMaker}> Maker Lab</span>
                   </div>
-                  <div className={styles.statMiniCard}>
-                    <span className={styles.statLabel}>Pending Reqs</span>
-                    <span className={styles.statVal}>5</span>
-                    <span className={styles.statusIndicatorOrange} />
+                  <nav className={styles.mockupSidebarNav}>
+                    <div className={clsx(styles.sidebarNavItem, styles.sidebarNavItemActive)}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                      <span>Dashboard</span>
+                    </div>
+                    <div className={styles.sidebarNavItem}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                      <span>Projects</span>
+                    </div>
+                    <div className={styles.sidebarNavItem}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                      <span>Equipment</span>
+                    </div>
+                    <div className={styles.sidebarNavItem}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                      <span>Users</span>
+                    </div>
+                    <div className={styles.sidebarNavItem}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                      <span>Stats</span>
+                    </div>
+                    <div className={styles.sidebarNavItem}>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                      <span>Ledger</span>
+                    </div>
+                  </nav>
+                </div>
+
+                {/* Right Content Frame */}
+                <div className={styles.mockupContent}>
+                  {/* Mini Header / Lang Select */}
+                  <div className={styles.mockupContentTopbar}>
+                    <span className={styles.topbarLang}>EN</span>
+                    <span className={styles.topbarLogin}>Login</span>
                   </div>
-                  <div className={styles.statMiniCard}>
-                    <span className={styles.statLabel}>Snipe-IT Sync</span>
-                    <span className={styles.statVal}>Online</span>
-                    <span className={styles.statusIndicatorGreen} />
+
+                  {/* Search Console */}
+                  <div className={styles.mockupAppHeader}>
+                    <div className={styles.appTitle}>
+                      <span className={styles.logoDeti}>DETI</span>
+                      <span className={styles.logoMaker}> Maker Lab</span>
+                    </div>
+                    <p className={styles.appSubtitle}>Your lab management platform. Search anything.</p>
+
+                    <div className={styles.mockupSearchWrapper}>
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className={styles.searchIcon}><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                      <span className={styles.searchPlaceholder}>Search projects, equipment...</span>
+                    </div>
                   </div>
-                  <div className={styles.statMiniCard}>
-                    <span className={styles.statLabel}>UA SSO</span>
-                    <span className={styles.statVal}>Secure</span>
-                    <span className={styles.statusIndicatorGreen} />
+
+                  {/* 2x2 Stats Grid */}
+                  <div className={styles.mockupDashboardGrid}>
+                    <div className={styles.dashboardStatCard}>
+                      <span className={styles.dashStatVal}>27</span>
+                      <span className={styles.dashStatLabel}>Active Projects</span>
+                    </div>
+                    <div className={styles.dashboardStatCard}>
+                      <span className={styles.dashStatVal}>289</span>
+                      <span className={styles.dashStatLabel}>Available Equip.</span>
+                    </div>
+                    <div className={styles.dashboardStatCard}>
+                      <span className={styles.dashStatVal}>120</span>
+                      <span className={styles.dashStatLabel}>Lab Members</span>
+                    </div>
+                    <div className={styles.dashboardStatCard}>
+                      <span className={styles.dashStatVal}>9</span>
+                      <span className={styles.dashStatLabel}>Checked Out</span>
+                    </div>
+                  </div>
+
+                  {/* Recent Projects Grid */}
+                  <div className={styles.mockupRecentProjects}>
+                    <div className={styles.recentProjectsTitle}>Recent Projects</div>
+                    <div className={styles.mockupProjectsGrid}>
+                      <div className={styles.mockupProjectCard}>
+                        <div className={clsx(styles.projectThumb, styles.thumbGradient1)} />
+                        <div className={styles.projectInfo}>
+                          <span className={styles.mockupProjectTitle}>Smart Irrigation</span>
+                          <span className={clsx(styles.projectBadge, styles.badgeActive)}>Active</span>
+                        </div>
+                      </div>
+                      <div className={styles.mockupProjectCard}>
+                        <div className={clsx(styles.projectThumb, styles.thumbGradient2)} />
+                        <div className={styles.projectInfo}>
+                          <span className={styles.mockupProjectTitle}>Delivery Rover</span>
+                          <span className={clsx(styles.projectBadge, styles.badgePending)}>Pending</span>
+                        </div>
+                      </div>
+                      <div className={styles.mockupProjectCard}>
+                        <div className={clsx(styles.projectThumb, styles.thumbGradient3)} />
+                        <div className={styles.projectInfo}>
+                          <span className={styles.mockupProjectTitle}>Air Quality</span>
+                          <span className={clsx(styles.projectBadge, styles.badgeActive)}>Active</span>
+                        </div>
+                      </div>
+                      <div className={styles.mockupProjectCard}>
+                        <div className={clsx(styles.projectThumb, styles.thumbGradient4)} />
+                        <div className={styles.projectInfo}>
+                          <span className={styles.mockupProjectTitle}>Smart Door Lock</span>
+                          <span className={clsx(styles.projectBadge, styles.badgeCompleted)}>Completed</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Dashboard Request Logs */}
-                <div className={styles.recentLogs}>
-                  <div className={styles.logsTitle}>Recent Requisitions</div>
-                  <div className={styles.logRow}>
-                    <span className={styles.logId}>#3102</span>
-                    <span className={styles.logItem}>Raspberry Pi 4 Model B</span>
-                    <span className={clsx(styles.badge, styles.badgePending)}>Pending Approval</span>
+                {/* Mobile Bottom Tab Menu */}
+                <div className={styles.mockupMobileNav}>
+                  <div className={clsx(styles.mobileNavItem, styles.mobileNavItemActive)}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <span>Home</span>
                   </div>
-                  <div className={styles.logRow}>
-                    <span className={styles.logId}>#3101</span>
-                    <span className={styles.logItem}>Arduino Starter Kit</span>
-                    <span className={clsx(styles.badge, styles.badgeApproved)}>Approved</span>
+                  <div className={styles.mobileNavItem}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                    <span>Projects</span>
                   </div>
-                  <div className={styles.logRow}>
-                    <span className={styles.logId}>#3098</span>
-                    <span className={styles.logItem}>Digital Multimeter</span>
-                    <span className={clsx(styles.badge, styles.badgeAssigned)}>Assigned</span>
+                  <div className={styles.mobileNavItem}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    <span>Items</span>
                   </div>
-                </div>
-
-                {/* Dashboard flow preview */}
-                <div className={styles.mockupFlow}>
-                  <div className={styles.flowStep}>
-                    <div className={styles.flowCircle}>1</div>
-                    <span>Request</span>
-                  </div>
-                  <div className={styles.flowLine} />
-                  <div className={styles.flowStep}>
-                    <div className={styles.flowCircle}>2</div>
-                    <span>Approve</span>
-                  </div>
-                  <div className={styles.flowLine} />
-                  <div className={styles.flowStep}>
-                    <div className={styles.flowCircle}>3</div>
-                    <span>Assign</span>
-                  </div>
-                  <div className={styles.flowLine} />
-                  <div className={styles.flowStep}>
-                    <div className={styles.flowCircle}>4</div>
-                    <span>Return</span>
+                  <div className={styles.mobileNavItem}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    <span>Profile</span>
                   </div>
                 </div>
               </div>
