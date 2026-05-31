@@ -15,6 +15,19 @@
   --ifm-color-primary-lightest: #49b939;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Smart Lab Custom Tokens */
+  --smart-lab-green: #388e2c;
+  --smart-lab-green-glow: rgba(56, 142, 44, 0.15);
+  --smart-lab-accent: #0099cc;
+  --smart-lab-accent-glow: rgba(0, 153, 204, 0.15);
+  --smart-lab-bg-gradient: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  --smart-lab-card-bg: rgba(255, 255, 255, 0.75);
+  --smart-lab-border: rgba(0, 0, 0, 0.08);
+  --smart-lab-text-muted: #64748b;
+  --smart-lab-grid-color: rgba(56, 142, 44, 0.04);
+  --smart-lab-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --smart-lab-header-color: #0f172a;
 }
 
 /* For readability concerns, use a lighter palette in dark mode. */
@@ -27,6 +40,19 @@
   --ifm-color-primary-lighter: #8ad97f;
   --ifm-color-primary-lightest: #aae3a1;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Smart Lab Custom Tokens - Dark Mode */
+  --smart-lab-green: #6bcf5c;
+  --smart-lab-green-glow: rgba(107, 207, 92, 0.25);
+  --smart-lab-accent: #38bdf8;
+  --smart-lab-accent-glow: rgba(56, 189, 248, 0.25);
+  --smart-lab-bg-gradient: linear-gradient(180deg, #0a0f1d 0%, #030712 100%);
+  --smart-lab-card-bg: rgba(15, 23, 42, 0.7);
+  --smart-lab-border: rgba(255, 255, 255, 0.08);
+  --smart-lab-text-muted: #94a3b8;
+  --smart-lab-grid-color: rgba(107, 207, 92, 0.04);
+  --smart-lab-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --smart-lab-header-color: #f8fafc;
 }
 
 .footer__logo {
@@ -40,3 +66,4 @@
   align-items: center;
   gap: 20px;
 }
+
