@@ -92,18 +92,28 @@
 
 /* Glassmorphism Navbar styling */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: transparent !important;
+  padding: 0 !important;
   border-bottom: 1px solid var(--smart-lab-border);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(10, 15, 29, 0.75) !important;
+  background-color: transparent !important;
   border-bottom: 1px solid var(--smart-lab-border);
   box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+.navbar__inner {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: var(--ifm-navbar-padding-vertical) var(--ifm-navbar-padding-horizontal);
+}
+
+[data-theme='dark'] .navbar__inner {
+  background-color: rgba(10, 15, 29, 0.75) !important;
 }
 
 .navbar__brand {
