@@ -1,57 +1,68 @@
 ---
 sidebar_position: 1
-title: DETI Maker Lab Documentation
-description: Technical documentation for the DETI Maker Lab information system.
+title: Introduction
+description: What DETI Maker Lab is, why it was built, and who this documentation is for.
 ---
 
-# DETI Maker Lab Documentation
+# DETI Maker Lab
 
-Welcome to the technical documentation of the **DETI Maker Lab information system**.
+**DETI Maker Lab** is an open university laboratory at the Department of Electronics, Telecommunications and Informatics (DETI) of the University of Aveiro. Students, teachers, and staff develop electronics, telecommunications, and informatics projects using shared equipment and facilities.
 
-This documentation describes the current architectural baseline of the project and is meant to serve two purposes:
+## The old problem
 
-1. provide a professional technical reference for the current implementation stage;
-2. create a documentation structure that can be incrementally extended in future milestones.
+The previous lab workflow was built around a MediaWiki installation:
 
-## What this documentation covers
+- Projects were created as wiki pages with hand-crafted Markdown.
+- Equipment requisitions were informal, manual, and tracked inconsistently.
+- Equipment inventory was maintained separately in Snipe-IT, but the two systems had no integration.
+- Data was fragmented: requisition history, project state, and equipment availability lived in different places.
+- There was no structured approval flow — technicians had no dedicated tool to review, approve, or reject requests.
 
-At the current stage, the documentation focuses on:
+The result was inconsistent data, difficult tracking, and a process that placed unnecessary burden on lab technicians and project leaders.
 
-- project scope and current system state;
-- solution architecture and runtime components;
-- infrastructure and deployment topology;
-- PostgreSQL database setup and configuration;
-- backend and integration responsibilities;
-- frontend and mobile application responsibilities;
-- engineering workflow, repository conventions, and quality practices.
+## The new solution
 
-## Current project baseline
+The new system transforms the workflow from **wiki-centred** to **project-centred**.
 
-The system is being designed as a **new application layer** around the DETI Maker Lab workflow, while preserving the value of the previous installed base. The main architectural decisions at this stage are:
+Projects and project groups become the primary entry point. From there:
 
-- **Snipe-IT** is the authoritative source for inventory and equipment availability;
-- **PostgreSQL** stores project-domain data such as users, projects, requisitions, assignments, and history;
-- the backend coordinates business logic, authentication integration, and inventory synchronization;
-- web and mobile clients consume the same application services;
-- the legacy wiki is treated as a source of prior data and domain knowledge, not as the future operational core.
+1. Users log in with their University of Aveiro SSO account.
+2. Users create or join a project.
+3. Users browse the equipment catalog and submit requisitions.
+4. The lab technician reviews, approves, or rejects each request.
+5. Approved requests reserve equipment in Snipe-IT.
+6. The technician checks out the physical asset in Snipe-IT.
+7. The system detects the checkout and updates the local request state.
+8. The student returns the equipment.
+9. The technician checks the asset back in to Snipe-IT.
+10. The system detects check-in and marks the request as returned.
+11. Status history and notifications preserve full traceability.
 
-## Intended audience
+## Feature summary
 
-This documentation is written for:
+| Feature | Description |
+|---|---|
+| SSO authentication | Login with University of Aveiro university credentials |
+| Project management | Create projects, join groups, manage members |
+| Equipment catalog | Browse, search, and filter available assets |
+| Requisitions | Submit and track equipment requests |
+| Technician dashboard | Approve/reject requests, manage inventory |
+| Snipe-IT integration | Authoritative inventory sync, reservation, checkout/check-in |
+| Status history | Full audit trail for all state transitions |
+| Notifications | In-app alerts for request events |
+| Mobile app | Expo/React Native app for iOS and Android |
+| Migration tooling | Python CLI for importing legacy Wiki data |
 
-- project team members;
-- supervisors and reviewers;
-- future contributors;
-- DevOps or infrastructure administrators who need to deploy or maintain the platform.
+## Who this documentation is for
 
-## Reading path
+| Audience | Sections to read |
+|---|---|
+| **Students and project members** | [User Guide](./user-guide/getting-started.md) |
+| **Lab technician** | [User Guide → Technician Workflow](./user-guide/technician-workflow.md), [Deployment](./deployment/overview.md) |
+| **Supervisors / professors** | [Overview](./overview/problem-and-solution.md), [User Guide](./user-guide/getting-started.md) |
+| **System administrators** | [Deployment](./deployment/overview.md), [Maintenance](./maintenance/routine-tasks.md) |
+| **Future developers** | [Architecture](./architecture/system-architecture.md), [Developer Guide](./developer-guide/local-development.md) |
 
-For a first read, use this order:
-
-1. **Overview**
-2. **Architecture**
-3. **Infrastructure**
-4. **Database**
-5. **Backend**
-6. **Frontend**
-7. **Engineering**
+:::info
+The documentation is structured so each audience can read their relevant sections without reading the whole site. Start with the section most relevant to your role.
+:::

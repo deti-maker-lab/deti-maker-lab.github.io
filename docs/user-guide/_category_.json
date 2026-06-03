@@ -1,0 +1,8 @@
+{
+  "label": "User Guide",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "How to use the DETI Maker Lab system: login, projects, equipment, requisitions, and the technician workflow."
+  }
+}

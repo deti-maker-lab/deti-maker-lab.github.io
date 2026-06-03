@@ -1,5 +1,8 @@
 {
   "label": "Overview",
   "position": 2,
-  "collapsed": false
+  "link": {
+    "type": "generated-index",
+    "description": "Understand the DETI Maker Lab system: the problem it solves, who uses it, and how the workflow runs end to end."
+  }
 }

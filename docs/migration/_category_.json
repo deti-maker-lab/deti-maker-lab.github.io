@@ -1,0 +1,8 @@
+{
+  "label": "Migration",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "How to import legacy DETI Maker Lab Wiki data into the new system."
+  }
+}
